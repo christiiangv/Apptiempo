@@ -6,6 +6,37 @@
 <meta name="color-scheme" content="light dark">
 <title>Tiempo · Christian García</title>
 <meta name="description" content="App del tiempo hecha con JavaScript y la API de Open-Meteo.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-mood="cloud">
+<main class="app">
+  <header class="top">
+    <h1>Tiempo</h1>
+    <button id="unit" class="ghost" type="button" aria-label="Cambiar entre grados Celsius y Fahrenheit">°C</button>
+  </header>
+
+  <form id="form" role="search">
+    <input id="q" type="search" placeholder="Busca una ciudad" aria-label="Ciudad" autocomplete="off" required>
+    <button type="submit">Buscar</button>
+    <button id="geo" class="ghost" type="button" aria-label="Usar mi ubicación">📍</button>
+  </form>
+
+  <ul id="suggest" hidden></ul>
+  <p id="status" role="status">Busca una ciudad para ver el tiempo.</p>
+
+  <sec<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Tiempo · Christian García</title>
+<meta name="description" content="App del tiempo hecha con JavaScript y la API de Open-Meteo.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
@@ -45,5 +76,27 @@
   <footer>Datos de <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a></footer>
 </main>
 <script src="js/app.js" defer></script>
+</body>
+</html>
+tion id="now" class="card now" hidden>
+    <h2 id="city"></h2>
+    <div id="icon" class="icon" aria-hidden="true"></div>
+    <div id="temp" class="temp"></div>
+    <p id="desc" class="desc"></p>
+    <div class="det">
+      <div><b id="feels"></b><small>Sensación</small></div>
+      <div><b id="hum"></b><small>Humedad</small></div>
+      <div><b id="wind"></b><small>Viento</small></div>
+    </div>
+  </section>
+
+  <section id="forecast" class="card" hidden>
+    <ul id="days" class="days"></ul>
+  </section>
+
+  <footer>Datos de <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a></footer>
+</main>
+
+<script src="app.js" defer></script>
 </body>
 </html>
