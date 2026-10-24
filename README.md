@@ -4,7 +4,7 @@ App del tiempo en JavaScript puro. Busca cualquier ciudad y muestra la temperatu
 
 <!-- Añade aquí una captura: ![Captura de Tiempo](docs/captura.png) -->
 
-**Demo:** https://christiiangv.github.io/tiempo-app/
+**Demo:** [https://christiiangv.github.io/tiempo-app/](https://christiiangv.github.io/Apptiempo/)
 
 ## Funciones
 
