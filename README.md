@@ -38,7 +38,3 @@ python -m http.server 8000
 ```
 
 y visita `http://localhost:8000`. La ubicación solo funciona en `localhost` o con HTTPS.
-
-## Ideas para mejorarlo
-
-
