@@ -41,6 +41,4 @@ y visita `http://localhost:8000`. La ubicación solo funciona en `localhost` o c
 
 ## Ideas para mejorarlo
 
-- Previsión por horas
-- Ciudades favoritas
-- Tests para la lógica de conversión de unidades
+
