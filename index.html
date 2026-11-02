@@ -45,9 +45,20 @@
     <ul id="days" class="days"></ul>
   </section>
 
+  <section id="riesgos" class="card" hidden aria-labelledby="riesgos-titulo">
+    <div class="r-head">
+      <h2 id="riesgos-titulo">Riesgos</h2>
+      <span id="riesgos-resumen" class="r-nivel" data-nivel="0"></span>
+    </div>
+    <p id="riesgos-estado" role="status"></p>
+    <ul id="riesgos-lista" class="riesgos"></ul>
+    <p class="r-nota">Estimación orientativa a partir de modelos de Open-Meteo (el caudal de los ríos viene de GloFAS). No sustituye los avisos oficiales de tu servicio meteorológico ni de protección civil.</p>
+  </section>
+
   <footer>Datos de <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a></footer>
 </main>
 
 <script src="app.js" defer></script>
+<script src="riesgos.js" defer></script>
 </body>
 </html>

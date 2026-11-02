@@ -45,3 +45,23 @@ a{color:inherit}
 
 @media (max-width:420px){.card{padding:22px}.days{font-size:.9rem}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* Riesgos meteorológicos */
+.r-head{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.r-head + #riesgos-estado{margin:6px 0 14px}
+.riesgos{list-style:none;padding:0;display:grid;gap:10px}
+.riesgo{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:12px 14px;border:1px solid var(--line);border-left-width:6px;border-radius:18px;background:var(--glass)}
+.riesgo[data-nivel="0"]{border-left-color:#7BD3A0}
+.riesgo[data-nivel="1"]{border-left-color:#F5C542}
+.riesgo[data-nivel="2"]{border-left-color:#F59E3B}
+.riesgo[data-nivel="3"]{border-left-color:#D64545}
+.r-ico{font-size:1.6rem;line-height:1}
+.riesgo b{display:block;font-weight:500}
+.riesgo p{font-size:.9rem;line-height:1.35;opacity:.85}
+.r-nivel{font-size:.8rem;font-weight:500;padding:4px 10px;border-radius:99px;white-space:nowrap;color:#1B2233;background:#7BD3A0}
+.r-nivel:empty{display:none}
+.r-nivel[data-nivel="1"]{background:#F5C542}
+.r-nivel[data-nivel="2"]{background:#F59E3B}
+.r-nivel[data-nivel="3"]{background:#D64545;color:#fff}
+.r-nota{margin-top:14px;font-size:.8rem;opacity:.7}
+@media (max-width:420px){.riesgo{grid-template-columns:auto 1fr;gap:4px 12px}.riesgo .r-nivel{grid-column:2;justify-self:start}}

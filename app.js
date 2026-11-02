@@ -63,6 +63,7 @@ async function cargar(lugar) {
     state.place = lugar;
     guardar('place', lugar);
     pintar();
+    document.dispatchEvent(new CustomEvent('tiempo:lugar', { detail: lugar })); // avisa al módulo de riesgos
     say();
   } catch {
     say('No se pudo cargar el tiempo. Comprueba tu conexión e inténtalo de nuevo.');
