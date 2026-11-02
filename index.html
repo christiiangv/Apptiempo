@@ -11,6 +11,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
 
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#9FB0CC">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body data-mood="cloud">
@@ -27,6 +31,11 @@
   </form>
 
   <ul id="suggest" hidden></ul>
+  <div class="favs">
+    <button id="fav" class="ghost" type="button" hidden>☆ Guardar</button>
+    <ul id="favlist" aria-label="Ciudades guardadas"></ul>
+  </div>
+
   <p id="status" role="status">Busca una ciudad para ver el tiempo.</p>
 
   <section id="now" class="card now" hidden>
@@ -45,6 +54,12 @@
     <ul id="days" class="days"></ul>
   </section>
 
+  <section id="extras" class="card" hidden aria-label="Próximas horas">
+    <p id="lluvia" role="status"></p>
+    <ul id="horas" class="horas"></ul>
+    <div id="sol" class="det"></div>
+  </section>
+
   <section id="riesgos" class="card" hidden aria-labelledby="riesgos-titulo">
     <div class="r-head">
       <h2 id="riesgos-titulo">Riesgos</h2>
@@ -55,10 +70,16 @@
     <p class="r-nota">Estimación orientativa a partir de modelos de Open-Meteo (el caudal de los ríos viene de GloFAS). No sustituye los avisos oficiales de tu servicio meteorológico ni de protección civil.</p>
   </section>
 
+  <section id="aire" class="card" hidden aria-labelledby="aire-titulo">
+    <h2 id="aire-titulo">Aire y mar</h2>
+    <ul id="aire-lista" class="riesgos"></ul>
+  </section>
+
   <footer>Datos de <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a></footer>
 </main>
 
 <script src="app.js" defer></script>
 <script src="riesgos.js" defer></script>
+<script src="extras.js" defer></script>
 </body>
 </html>

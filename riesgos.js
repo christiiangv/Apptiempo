@@ -268,9 +268,13 @@
     render();
   }
 
-  document.addEventListener('tiempo:lugar', e => cargarRiesgos(e.detail));
-  $('unit').addEventListener('click', render); // cambia mm/in, km/h/mph, °C/°F
+  if (typeof document !== 'undefined') {
+    document.addEventListener('tiempo:lugar', e => cargarRiesgos(e.detail));
+    $('unit').addEventListener('click', render); // cambia mm/in, km/h/mph, °C/°F
+    // Por si app.js ya terminó de cargar la ciudad antes de que este módulo arrancara
+    if (typeof state !== 'undefined' && state.data && state.place) cargarRiesgos(state.place);
+  }
 
-  // Por si app.js ya terminó de cargar la ciudad antes de que este módulo arrancara
-  if (typeof state !== 'undefined' && state.data && state.place) cargarRiesgos(state.place);
+  // Para los tests (node --test)
+  if (typeof module !== 'undefined') module.exports = { UMBRAL, subeA, bajaA, pico, mediana, ventana };
 })();

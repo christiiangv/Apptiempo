@@ -65,3 +65,15 @@ a{color:inherit}
 .r-nivel[data-nivel="3"]{background:#D64545;color:#fff}
 .r-nota{margin-top:14px;font-size:.8rem;opacity:.7}
 @media (max-width:420px){.riesgo{grid-template-columns:auto 1fr;gap:4px 12px}.riesgo .r-nivel{grid-column:2;justify-self:start}}
+
+/* Extras: favoritas, próximas horas, sol */
+.favs{display:flex;gap:8px;align-items:center;margin-top:12px;flex-wrap:wrap}
+.favs ul{list-style:none;padding:0;display:flex;gap:8px;flex-wrap:wrap}
+.favs button{padding:8px 14px;font-size:.9rem}
+#lluvia{font-size:1.1rem;margin-bottom:14px}
+.horas{list-style:none;padding:0 0 6px;display:flex;gap:6px;overflow-x:auto;text-align:center;scroll-snap-type:x proximity}
+.horas li{flex:0 0 58px;display:grid;gap:2px;scroll-snap-align:start}
+.horas b{font-size:1.6rem;font-weight:400;line-height:1.4}
+.horas i{font-style:normal;font-size:.85rem;opacity:.7}
+#sol{margin-top:14px}
+#aire-titulo{margin-bottom:14px}
